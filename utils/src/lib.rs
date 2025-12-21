@@ -28,7 +28,7 @@ pub trait LinesWithEol<T> {
 
 impl<T: BufRead> LinesWithEol<T> for T {
     fn lines_with_eol(self) -> EolPreservingLines<T> {
-        return EolPreservingLines { buf: self };
+        EolPreservingLines { buf: self }
     }
 }
 
