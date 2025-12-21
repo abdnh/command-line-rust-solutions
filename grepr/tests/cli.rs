@@ -5,7 +5,6 @@ use rand_distr::Alphanumeric;
 use rand::Rng;
 
 use std::{error::Error, fs, path::Path};
-use sys_info::os_type;
 
 const PRG: &str = "grepr";
 const BUSTLE: &str = "tests/inputs/bustle.txt";
@@ -67,7 +66,7 @@ fn warns_bad_file() -> Result<()> {
 // --------------------------------------------------
 fn run(args: &[&str], expected_file: &str) -> Result<()> {
     let windows_file = format!("{expected_file}.windows");
-    let expected_file = if os_type().unwrap() == "Windows"
+    let expected_file = if cfg!(windows)
         && Path::new(&windows_file).is_file()
     {
         &windows_file
