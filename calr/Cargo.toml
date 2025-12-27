@@ -1,0 +1,18 @@
+[package]
+name = "calr"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ansi_term = "0.12.1"
+chrono = "0.4.42"
+clap = { version = "4.5.52", features = ["derive"] }
+itertools = "0.14.0"
+num-traits = "0.2.19"
+snafu = "0.8.9"
+utils = { path = "../utils" }
+
+[dev-dependencies]
+assert_cmd = "2.1.1"
+predicates = "3.1.3"
+pretty_assertions = "1.4.1"
