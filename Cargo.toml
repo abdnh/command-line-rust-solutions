@@ -1,3 +1,3 @@
 [workspace]
-members = ["hello", "echor", "catr", "headr", "wcr", "uniqr", "findr", "cutr", "grepr", "commr", "tailr", "fortuner", "calr"]
+members = ["hello", "echor", "catr", "headr", "wcr", "uniqr", "findr", "cutr", "grepr", "commr", "tailr", "fortuner", "calr", "lsr"]
 resolver = "3"
